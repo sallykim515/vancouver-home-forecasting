@@ -120,13 +120,25 @@ mydata.valid <- mydata.valid[order(mydata.valid$Total.floor.area),]
 price.pred <- data.frame(predict(z.final, newdata=mydata.valid, 
                                  interval="prediction", level=0.95))
 
-plot(Price ~ Total.floor.area, data=mydata.valid)
+plot(Price ~ Total.floor.area, data=mydata.valid,
+     main="Over- and Under- valued Properties",
+     xlab="Total Floor Area (sq.ft.)",
+     ylab="Price ($)"
+     )
 lines(price.pred$fit ~ mydata.valid$Total.floor.area)
-lines(price.pred$lwr ~ mydata.valid$Total.floor.area, lty=2)
-lines(price.pred$upr ~ mydata.valid$Total.floor.area, lty=2)
+lines(price.pred$lwr ~ mydata.valid$Total.floor.area, lty=2, col='blue')
+lines(price.pred$upr ~ mydata.valid$Total.floor.area, lty=2, col='blue')
 
 # color under-valued properties (ie, outside 95% prediction interval)
 highlight_pts(mydata.valid, "Total.floor.area", mydata.valid$Price < price.pred$lwr)
+highlight_pts(mydata.valid, "Total.floor.area", mydata.valid$Price > price.pred$upr)
+
+# under-valued properties
+print(mydata.valid$Address[mydata.valid$Price < price.pred$lwr])
+
+# over-valued properties
+print(mydata.valid$Address[mydata.valid$Price > price.pred$upr])
+
 
 
 
