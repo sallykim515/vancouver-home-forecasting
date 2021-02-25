@@ -48,5 +48,13 @@ The red dots indicate those outside the prediction intervals, suggesting their o
 
 ![properties](https://user-images.githubusercontent.com/39283556/108954806-2feda080-7622-11eb-90c8-c105a048fb66.PNG)
 
+# Extension
+As an extension to the multiple linear regression model, a decision tree model was created in Python. The below is an impact of number of leaf nodes (i.e. depth of the tree) on MAE (Mean Average Error) values, in relative percentage form to the average of home Price. 
 
+![optimal_leaf_nodes](https://user-images.githubusercontent.com/39283556/109229449-2a09d380-7778-11eb-8c66-7da2511c3fc1.PNG)
 
+![decision_tree_results](https://user-images.githubusercontent.com/39283556/109229456-2b3b0080-7778-11eb-8065-4194b9e99caa.PNG)
+
+# Notes for Further Exploration
+- Identify over- and under- valued properties using the decision tree model, and compare the results from the original MLR model
+- Compare the performances of Multiple Linear Regression vs. Decision Tree Regression
