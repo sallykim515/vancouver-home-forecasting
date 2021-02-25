@@ -18,7 +18,7 @@ def get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y):
 def build_and_predict(train_X, val_X, train_y, val_y, max_leaf_nodes, random_state):
 
     # build the model
-    vanc_model = DecisionTreeRegressor(random_state=1)
+    vanc_model = DecisionTreeRegressor(random_state=random_state, max_leaf_nodes=max_leaf_nodes)
     vanc_model.fit(train_X, train_y)
 
     # predict
