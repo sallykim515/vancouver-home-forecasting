@@ -3,7 +3,7 @@
 # on the previous work of MLR model in R
 # Decision Tree and Random Forest modelling here
 ###########################################################
-import decision_tree_functions as fn
+import models_functions as fn
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
