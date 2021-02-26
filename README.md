@@ -55,6 +55,9 @@ As an extension to the multiple linear regression model, a decision tree model w
 
 ![decision_tree_results](https://user-images.githubusercontent.com/39283556/109229456-2b3b0080-7778-11eb-8065-4194b9e99caa.PNG)
 
+Further Random Forest model was built with an improved prediction performance:
+![random_forest_mae](https://user-images.githubusercontent.com/39283556/109353129-c42d5280-7830-11eb-8d01-c51254215987.PNG)
+
 # Notes for Further Exploration
 - Identify over- and under- valued properties using the decision tree model, and compare the results from the original MLR model
 - Compare the performances of Multiple Linear Regression vs. Decision Tree Regression
